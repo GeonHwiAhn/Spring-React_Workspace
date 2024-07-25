@@ -7,4 +7,12 @@
 		select * from user
 	</select>
 	<!-- insert delete select -->
+	<!-- 
+	useGeneratedKeys="true" = DB에서 Auto_increment 자동 증가 설정을 했을 때 키 값을 자동으로 넣을 수 있도록 설정
+	keyProperty="id" 자동으로 증가하는 기준이 되는 키 설정은 어떤 컬럼을 바라볼 것인가?
+	 -->
+	<insert id="insertUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+	Insert into user(name, email)
+	values(#{name}, #{email})
+	</insert>
 </mapper>

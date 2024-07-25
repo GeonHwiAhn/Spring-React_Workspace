@@ -9,4 +9,6 @@ import com.kh.dto.User;
 @Mapper
 public interface UserMapper {
 	List<User> findAll();
+	
+	void insertUser(User user);
 }
