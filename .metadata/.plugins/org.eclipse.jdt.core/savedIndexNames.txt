@@ -12,7 +12,6 @@ INDEX VERSION 1.134+C:\Users\user1\Spring-React-Workspace\.metadata\.plugins\org
 4046623653.index
 1235493042.index
 37811231.index
-3455376728.index
 1821101327.index
 2305205916.index
 354629874.index
