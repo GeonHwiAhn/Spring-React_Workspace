@@ -52,7 +52,7 @@ function App() {
                 <button onClick={Java에업로드}>Submit</button>
             
 
-
+            {/*}
                 <div>
                     {posts.map(post => (
                       <div key={post.id}  >
@@ -64,7 +64,7 @@ function App() {
                       </div>
                 ))}
                 </div>
-            
+            */}
         </div>
     );
 }
