@@ -5,10 +5,12 @@ import Profile from "./component/Profile";
 import Header from "./component/layout/Header";
 import Main from "./component/Main";
 import Footer from "./component/layout/Footer";
+import Banner from "./component/layout/Banner";
 
 function App() {
   return (
     <Router>
+      <Banner />
       <Header />
       <Routes>
         <Route path="/" element={<Main />} />

@@ -8,5 +8,23 @@
     display: flex; /*세로 -> 나란히*/
     justify-content: space-around;
     margin: 0;
-    pad: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background-color: #1c1818;
+    border-radius: 8px;
+    padding: 5px 10px;
+    text-decoration: underline;
+}
+
+
+.nav-item {
+    margin: 0 10px;
 }
