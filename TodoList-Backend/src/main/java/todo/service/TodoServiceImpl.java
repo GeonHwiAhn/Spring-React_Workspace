@@ -63,5 +63,11 @@ public class TodoServiceImpl implements TodoService {
 		}
 		
 		//react -> map key value 형태로 키이름과 키에 해당하는 값이 들어올 것
-	
+	/*
+	public private
+	[접근제한자:public/private] [반환형 int/String/혹은 TodoMember 타입] 메서드명(매개변수){
+		메서드 내용
+		return 반환값 = 반환값의 타입은 반드시 반환형이어야 한다
+	}
+	*/
 }

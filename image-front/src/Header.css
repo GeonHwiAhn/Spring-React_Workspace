@@ -1,0 +1,12 @@
+.header-nav {
+    background-color: #333;
+    padding: 10px 20px; /*위아래 10px 양옆 20px*/
+}
+
+.nav-list {
+    list-style: none;
+    display: flex; /*세로 -> 나란히*/
+    justify-content: space-around;
+    margin: 0;
+    pad: 0;
+}
