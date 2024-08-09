@@ -15,4 +15,9 @@
 		VALUES (#{title}, #{content}, #{imageUrl} )
 	</insert>
 
+	<update id="updatePost" parameterType="com.kh.dto.Post">
+		UPDATE posts
+		set title = #{title}, content=#{content}, image_url = #{iamgeUrl}
+		where id = #{id}
+	</update>
 </mapper>        
