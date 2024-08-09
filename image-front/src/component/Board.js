@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import '../App.css';
-
 const Board = () => {
-
   const postAPI = "http://localhost:9007/posts";
   const uploadAPI = "http://localhost:9007/gellery/upload";
-
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [files, setFiles] = useState([]);
@@ -93,7 +90,7 @@ const Board = () => {
               , 기준으로 이미지를 가져와야함
             */}
             <div className="images">
-            {post.imageUrl && post.imageUrl.split(",").map((image) => (
+            {post.imageUrl.split(",").map((image) => (
               <img key={image} src={`http://localhost:9007/images/${image}`} />
             ))}
             </div>
