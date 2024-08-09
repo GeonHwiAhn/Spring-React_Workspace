@@ -89,7 +89,7 @@ const Board = () => {
               , 기준으로 이미지를 가져와야함
             */}
             <div className="images">
-            {post.imageUrl.split(",").map((image) => (
+            {post.imageUrl && post.imageUrl.split(",").map((image) => (
               <img key={image} src={`http://localhost:9007/images/${image}`} />
             ))}
             </div>

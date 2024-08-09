@@ -6,7 +6,7 @@
 <mapper namespace="com.kh.mapper.ProfileMapper">
 
 	<select id="getProfile" resultType="com.kh.dto.UserProfile">
-		SELECT * FROM user_profiles;	
+		SELECT * FROM user_profiles
 	</select>
 	
 	

@@ -13,6 +13,9 @@ import org.springframework.web.multipart.MultipartFile;
 import com.kh.dto.Post;
 import com.kh.service.PostService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 public class PostController {
 	
@@ -35,6 +38,10 @@ public class PostController {
 		// postService.findAll(); -> 데이터가 무수히 많아 목록으로 가져와야하는데 
 		// 리스트로 전달안해주면 map ~~ react 문제가 발생
 		List<Post> posts = postService.findAll();
+		
+		//log.info("posts : ", posts.toString());
+		//log.info("posts.size() : ", posts.size());
+		
 		return ResponseEntity.ok(posts);
 	}
 

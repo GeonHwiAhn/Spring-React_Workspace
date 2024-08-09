@@ -6,7 +6,7 @@
 
 	<!-- select 전체게시글 보기 SQL -->
 	<select id="findAll" resultType="com.kh.dto.Post">
-		select * from POSTS
+		select * from posts
 	</select>
 	
 	<insert id="insertPost" parameterType="com.kh.dto.Post">
