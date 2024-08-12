@@ -32,7 +32,7 @@ const Profile = () => {
     //   /profile/upload  3000번 백엔드포트를 타야하는지?
     fetch(uploadAPI, {
       method: "POST", //DB에 값을 저장하기 위해 Post 사용
-      headers: { "Content-Type": "multipart/form-data" }, //데이터에 파일(이미지)이 포함됨을 자바에 알려줌
+      headers: { "Content-Type": "multipart/form-data"  }, //데이터에 파일(이미지)이 포함됨을 자바에 알려줌
       body: formData,
     })
       //mysql DB에 값 넣기를 성공했다면! 성공 후 수행할 작업
@@ -46,6 +46,8 @@ const Profile = () => {
         게시물가져오기();
       });
   };
+
+
   // 2. axios async await 버전 = 3번의 업그레이드 버전 try / catch 를 사용해서 오류 처리
   //  async ()  : 이 기능에는 잠시 대기해야할 코드가 적혀있다.
   const 이미지업로드2 = async () => {
@@ -57,9 +59,10 @@ const Profile = () => {
     // await formdata를 가져오기 전까지 잠시 대기
     await axios
       .post(uploadAPI, formData, {
-        headers: { /*"Content-Type": "multipart/form-data" */},
+        headers: { "Content-Type": "multipart/form-data" },
       })
       .then((response) => {
+        
         /*
         return response.json();
       })
@@ -81,7 +84,7 @@ const Profile = () => {
 
     axios
       .post(uploadAPI, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
+        headers: { /*"Content-Type": "multipart/form-data" */ },
       })
       .then((response) => {
         const data = response.data;
@@ -108,6 +111,7 @@ const Profile = () => {
     setUserId(p.userId); //수정할 사용자 ID 설정
     setUsername(p.username);
   }
+  
   return (
     <div>
       <h1>프로필 이미지 업로드</h1>

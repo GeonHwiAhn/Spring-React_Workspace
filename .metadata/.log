@@ -2955,3 +2955,18 @@ org.eclipse.jdt.internal.compiler.problem.AbortCompilation: Pb(347) The type com
 
 !ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2024-08-09 09:50:56.087
 !MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-08-12 11:06:49.950
+!MESSAGE No repository found at http://download.eclipse.org/technology/m2e/releases/.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2024-08-12 11:08:48.459
+!MESSAGE No repository found at http://dl.bintray.com/testng-team/testng-p2-release/.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2024-08-12 11:13:26.125
+!MESSAGE The digest algorithms (md5) used to verify osgi.bundle,javaewah,1.1.6.v20160919-1400 have severely compromised security. Please report this concern to the artifact provider.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2024-08-12 11:13:26.378
+!MESSAGE The digest algorithms (md5) used to verify osgi.bundle,javax.xml.bind,2.2.0.v201105210648 have severely compromised security. Please report this concern to the artifact provider.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2024-08-12 12:23:24.415
+!MESSAGE Classpath changed for project: spring-naver-back
