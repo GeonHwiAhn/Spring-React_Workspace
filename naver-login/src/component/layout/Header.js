@@ -10,6 +10,17 @@ const Header = () => {
     {} -> 외부에서 작성된 변수를 가져와서 사용할 때 설정
     const {loginMember, setLoginMember} = useContext(AuthContext);
     */
+
+
+    // localStorage : 고객 컴퓨터 웹사이트에 데이터를 영구적으로 저장
+    // localStorage 저장된 데이터는 브라우저를 닫거나 컴퓨터를 껐다 켜도 유지
+    // 사용자가 타이머를 맞춰서 삭제하거나, 로그아웃을 하거나, 캐시를 지우지 않는 한 유지
+    // 대표적으로 구글크롬 로그인
+    const handle로그아웃기능 = () => {
+        setLoginMember(null);
+        localStorage.removeItem('loginMember');
+    }
+
     return(
         <header>
         <h1>헤더부분</h1>
@@ -26,12 +37,12 @@ const Header = () => {
                 //태그 2개 이상 사용시 div로 묶어줘야함!!!
                 <div>
                     <span>환영합니다.{loginMember.name}님</span>
-                    <button>로그아웃</button>
+                    <button onClick={handle로그아웃기능}>로그아웃</button>
                 </div>
                 ) : (
                     <div>
                     <Link to="/login">로그인하기</Link>
-                    <Link to="/회원가입api url">회원가입하기</Link>
+                    <Link to="/api/naver">회원가입하기</Link>
                     </div>
                 ) }
         </nav>
