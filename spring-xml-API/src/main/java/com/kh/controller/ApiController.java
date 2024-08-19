@@ -13,9 +13,19 @@ public class ApiController {
 
 	@Autowired
 	private ApiService apiService;
+	/*
+	 *   오직 return으로 전달만 진행할 때 사용
+		@GetMapping("/air-pollution")
+		public String GetAirData() throws Exception {
+		return apiService.getAirData();
+	}
+	*/
 	
 	@GetMapping("/air-pollution")
 	public String GetAirData() throws Exception {
-		return apiService.getAirData();
+		String airData =  apiService.getAirData();
+		
+		System.out.println("air Data : " + airData);
+		return airData;
 	}
 }
