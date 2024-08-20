@@ -15,6 +15,15 @@ const ChickenList = () => {
         );
     }, [])
 
+/*
+    const deleteChicken = () => {
+        axios.delete("http://localhost:9090/api/chicken")
+        .then(() => {
+            setChickens
+        })
+    }
+*/
+
     return (
         <div className="chicken-container">
             <h1>치킨 메뉴</h1>
@@ -22,6 +31,7 @@ const ChickenList = () => {
             {chickens.map(chicken => (
                 <li key={chicken.id}>
                     {chicken.chickenName} = {chicken.description} = ₩{chicken.price}원
+                    <button /*onClick={deleteChicken}*/>메뉴 삭제하기</button>
                 </li>
             ))}
             </ul>
