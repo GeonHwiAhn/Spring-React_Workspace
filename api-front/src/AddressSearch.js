@@ -16,7 +16,7 @@ const AddressSearch = () => {
              "Content-Type" : "application/JSON",
          },
          //자바에서 파라미터값도 address로 설정해주어야함
-         body:JSON.stringify({address:최중주소}),
+         body:JSON.stringify({address:최종주소}),
      })
      //성공했을 때
      .then(response => response.json())
@@ -42,7 +42,7 @@ const AddressSearch = () => {
 
  // 2. axios버전 then catch    async await XXXXXXX
  const saveAxios = () => {
-    axios.post("http://localhost:8080/api/addUser", {address:최중주소})
+    axios.post("http://localhost:8080/api/addUser", {address:최종주소})
     //성공했을 때
     .then(response => alert("데이터 넣기 성공"))
 }
@@ -93,6 +93,7 @@ const AddressSearch = () => {
     setAddress(fullAddress);
   };
 
+  
   // 주소검색 버튼을 누를 경우 openPostcode 기능 실행
   const openPostcode = () => {
     // new window.daum
