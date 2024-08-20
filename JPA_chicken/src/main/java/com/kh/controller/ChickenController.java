@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,8 +24,10 @@ public class ChickenController {
 		return chickenService.getAllChickens();
 	}
 	
+	
 	@PostMapping
-	public Chicken saveChicken(Chicken chicken) {
+	public Chicken saveChicken(@RequestBody Chicken chicken) {
+							 //@RequsetBody 없으면 값을 읽지 못함
 		return chickenService.createChicken(chicken);
 	}
 }
