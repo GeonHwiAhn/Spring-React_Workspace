@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import axios from "axios";
 import { useParams } from 'react-router-dom';
+import '../css/ChickenDetail.css';
 
 const ChickenDetail = () => {
     //{} = 특정값을 받아오는것 [] = 변수명을 설정하는것
