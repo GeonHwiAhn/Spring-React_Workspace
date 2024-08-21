@@ -13,7 +13,19 @@
   margin-bottom: 20px;
 }
 
-.app-container button {
+.app-container .chicken-register-button  {
   display: block;
+  /* 시계방향 상우하좌 */
   margin: 0 auto 20px auto;
+  font-size: 1.2em;
+  color: #28a745;
+  background-color: 28a745;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+.app-container .chicken-register-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
 }
