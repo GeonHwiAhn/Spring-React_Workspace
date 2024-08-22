@@ -20,10 +20,18 @@ public class ChickenService {
 		return chickenRepository.findAll(); //find=찾기 All=모두
 	}
 	
+	
 	// 치킨 메뉴 추가하기
 	public Chicken createChicken (Chicken chicken) {
 		return chickenRepository.save(chicken); //치킨에 대해서 DTO에 작성된 컬럼들에 모두 삽입
 	}
+
+	
+	//치킨 삭제하기
+	public Chicken deleteChicken (Chicken chicken) {
+		return deleteChicken(chicken);
+	}
+	
 	
 	// 치킨 메뉴 상세보기
 	public Chicken findById(Integer id) {
@@ -32,8 +40,18 @@ public class ChickenService {
 						("일치하는 정보를 찾을 수 없습니다."));
 	}
 	
-	//치킨 삭제하기
-	public Chicken deleteChicken (Chicken chicken) {
-		return deleteChicken(chicken);
+
+	// findById를 작성해 줄 때는 아이디를 찾지 못할 예외사항을 필수로 작성해줘야함
+	//	.orElseThrow() 예외사항 작성
+	
+	//치킨 메뉴 수정하기 		id= 수정할컬럼 아이디		uc= 수정된 내용 저장할 치킨 객체
+	public Chicken updateChicken(Integer id, Chicken uc) {
+		Chicken chicken = chickenRepository.findById(id)
+						.orElseThrow(() -> new RuntimeException("치킨을 찾을수 없습니다."));
+		// 치킨 객체에 수정된 치킨 이름을 가져와서 넣어주기
+		chicken.setChickenName/*덮어쓰기*/(uc.getChickenName/*리액트에작성한내용가져오기*/());
+		chicken.setDescription(uc.getDescription());
+		chicken.setPrice(uc.getPrice());
+		return chickenRepository.save(chicken);
 	}
 }

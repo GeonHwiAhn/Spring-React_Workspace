@@ -25,11 +25,16 @@ const ChickenDetail = () => {
         )
     }
 
+    const handle수정하기 = () => {
+        
+    }
+
     return (
         <div className="chicken-detail-container">
         <h1>{chicken.chickenName}</h1>
         <p>{chicken.description}</p>
         <p>{chicken.price} 원</p>
+        <button onClick={handle수정하기}>수정하기</button>
         </div>
     )
 }
