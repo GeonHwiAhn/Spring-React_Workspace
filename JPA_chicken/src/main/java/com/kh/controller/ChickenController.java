@@ -18,39 +18,37 @@ import com.kh.service.ChickenService;
 @RestController
 @RequestMapping("/api/chicken")
 public class ChickenController {
-
-	@Autowired //참조
+	
+	@Autowired // 참조
 	private ChickenService chickenService;
 	
-	
 	@GetMapping
-	public List<Chicken> getAllChickens() {
+	public List<Chicken> getAllChickens(){
 		return chickenService.getAllChickens();
 	}
 	
-	
 	@PostMapping
 	public Chicken saveChicken(@RequestBody Chicken chicken) {
-							 //@RequsetBody 없으면 값을 읽지 못함
 		return chickenService.createChicken(chicken);
 	}
-	
 	
 	@GetMapping("{id}")
 	public Chicken getChickenById(@PathVariable("id") Integer id) {
 		return chickenService.findById(id);
 	}
 	
-	
-	/*1.수정할 컬럼 아이디 가져오기, 2.수정된 내용 저장하기*/
+	/*
+		 1. 수정할 컬럼 아이디 가져오기
+		 2. 수정된 내용 저장하기
+	 */
 	@PutMapping("{id}")
-	public Chicken updateChicken(@PathVariable ("id") Integer id, @RequestBody Chicken chicken) {
+	public Chicken updateChicken(@PathVariable("id") Integer id, @RequestBody Chicken chicken) {
+		System.out.println("chicken data : " + chicken);
 		return chickenService.updateChicken(id, chicken);
 	}
 	
-	
-	@DeleteMapping
-	public Chicken deleteChicken(@RequestBody Chicken chicken) {
-		return chickenService.createChicken(chicken);
+	@DeleteMapping("{id}")
+	public void deleteChicken(@PathVariable("id") Integer id) {
+		chickenService.deleteChicken(id);
 	}
 }
