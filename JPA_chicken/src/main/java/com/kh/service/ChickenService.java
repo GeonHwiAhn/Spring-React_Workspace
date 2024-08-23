@@ -51,4 +51,10 @@ public class ChickenService {
 		chickenRepository.delete(c);
 	}
 	
+	
+	// 치킨 검색기능 추가
+	public List<Chicken> searchChickens(String query) {
+		return chickenRepository.findByChickenNameContainingIgnoreCase(query);
+	}
+	
 }

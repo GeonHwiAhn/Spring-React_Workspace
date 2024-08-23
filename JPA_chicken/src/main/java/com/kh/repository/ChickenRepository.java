@@ -1,5 +1,7 @@
 package com.kh.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -9,6 +11,19 @@ import com.kh.dto.Chicken;
 // @Repository @Mapper 는 interface로 시작
 @Repository
 public interface ChickenRepository extends JpaRepository<Chicken, Integer> {
+	// 검색은 sql문이 예외적이기때문에 필수로 작성
+	/*
+	 * findByChickenName = 어떤컬럼에서 검색		where chickenName = "?"
+	 * Containing 		 = 부분일치 허용 		Like %...% 
+	 * IgnoreCase		 = 대소문자 구분없이 검색  사용같음
+	 * 
+	 * */
+	List<Chicken> findByChickenNameContainingIgnoreCase(String query);
+	
+	
+	
+	
+	
 	//전체보기 전체넣기 전체수정하기 전체삭제하기와 같은 기본 기능은
 	//JpaRepository 안에 모두 들어있음
 	
