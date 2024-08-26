@@ -7,6 +7,8 @@
     ** = 닫기 사건이 발생했음 -> 대처방안 메인에서 특정기능이 안보이게 닫는다.**
  */
 
+
+
 // [] = 변수선언    {} = 외부에서 가져온값 사용
 const Modal = (isOpen, onClose, children) => {
 
@@ -17,6 +19,7 @@ const Modal = (isOpen, onClose, children) => {
         <div>
             <div>
                 <button onClick={onClose}>들어가기</button>
+                {children}
             </div>
         </div>
     )
