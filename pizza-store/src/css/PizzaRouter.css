@@ -1,0 +1,22 @@
+.app-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.app-container h1 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/*서치 컨테이너 모두 한줄에 나란히 오게 설정*/
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+}

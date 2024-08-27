@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pizza-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.1);   
+}
+
+.pizza-container h1{
+    font-size: 36px;
+    /*color: #ff4500;*/
+    background: linear-gradient(to left, #F3E37C, #F3D34A, #EEA243, #F3A738, #F1D9A7);
+    /* 그라디언트가 text에만 적용될 수 있도록 설정*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /*기존 글자색 탈색*/
+    /*최신 웹 브라우저에서 색상이 적용될 수 있도록 최신 설정*/
+    background-clip: text;
+    color: transparent;
+
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pizza-container li {
+    background-color: #fff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0, 0.1);
+}
+
+/* :hover 마우스를 올렸을 때 특정 변화를 일으키게 만드는 것*/
+.pizza-container li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.pizza-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.pizza-description {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.pizza-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff4500;
+}

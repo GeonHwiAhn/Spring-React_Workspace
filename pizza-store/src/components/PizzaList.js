@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from "react";
 import axios from 'axios';
+import '../css/PizzaList.css';
+
 const PizzaList = () => {
     const [pizzas, setPizzas] = useState([]);
     //useEffect 활용해서 피자리스트 가져오기 연결 proxy 설정 필수

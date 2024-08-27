@@ -1,9 +1,10 @@
 // 메뉴 등록 버튼 검색 버튼
 
+import '../css/PizzaRouter.css';
 import { useState } from "react";
 import Modal from "./Modal";
+import PizzaForm from "./PizzaForm";
 import { useNavigate } from "react-router-dom";
-import PizzaForm from "./Pizzaform";
 
 const PizzaRouter = () => {
     /* 모달 관련 변수와 기능들 */
