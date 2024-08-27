@@ -14,9 +14,54 @@
     margin-bottom: 20px;
 }
 
+.app-container button {
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    border-radius: 10px;
+    color: white;
+}
 /*서치 컨테이너 모두 한줄에 나란히 오게 설정*/
 
 .search-container {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.search-container input {
+    max-width: 70%;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-container input:focus {
+    border-color: #24b467;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #92e700;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #037a25;
+}
+
+.modal-container button {
+    background-color: #ff5733;
+    padding: 5px 10px;
+    
 }
