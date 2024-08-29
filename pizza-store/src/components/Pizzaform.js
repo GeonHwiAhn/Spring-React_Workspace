@@ -1,7 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import '../css/PizzaForm.css'
-
+import '../css/PizzaForm.css';
 const PizzaForm = () => {
     const [pizzaName, setPizzaName] = useState('');
     const [description, setDescription] = useState('');
