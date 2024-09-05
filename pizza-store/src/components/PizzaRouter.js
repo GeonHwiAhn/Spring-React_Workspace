@@ -19,7 +19,7 @@ const PizzaRouter = () => {
     }
     return(
         <div className="app-container">
-            <h1>치킨 메뉴 검색하기</h1>
+            <h1>피자 메뉴 검색하기</h1>
             <div className="search-container">
                 <input type="text" placeholder="검색하고 싶은 치킨 메뉴를 작성해주세요." 
                 value={search}
